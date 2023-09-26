@@ -1,0 +1,41 @@
+.container{
+    display: flex;
+    width: 90vw;
+}
+
+.vehicle{
+    position: relative;
+    border: 2px solid #0000004b;
+    margin-top: 5rem;
+    margin-right: 20em;
+    font-size: 15px;
+    left: 100px;
+    height: 50vh;
+    width: 20vw;
+    background-color: aliceblue;
+    overflow-y: scroll;
+    border-radius: 10px;
+}
+.title{
+    margin-top: 6px;
+    font-weight: bold;
+    margin-left: 10px;
+    font-size: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+iframe{
+    margin-top: 5rem;
+    margin-left: 10rem;
+}
+
+span{
+    display: block;
+    margin-top: 10px;
+}
+
+.text{
+    margin-top: 40px;
+    font-size: larger;
+    margin-left: 90px;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}

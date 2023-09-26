@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'dashboard.css' %}">
+    <title>Dashboard</title>
+</head>
+<body>
+    <header>
+        <form action="track/" method="">
+            <input type="submit" value="Track" class="admin" >
+        </form>
+        <form action="adminDashboard" method="post">
+            {% csrf_token %}
+            <input type="submit" value="Admin" class="admin" >
+        </form>
+        
+    </header>
+    <div class="container">
+        <div class="content1">
+            <div class="text">
+                <div class="box">Active Vehicles - 2 <br></div>
+                <div class="box">Idle Vehicles - 3   <br></div>
+                <div class="box">Inactive Vehicles -2 <br></div>
+                <div class="box">Total Vehicles - 7 <br></div>
+            </div>  
+        </div>
+        <div class="content">
+            <img src="https://www.tibco.com/sites/tibco/files/media_entity/2022-01/PieChart-01.svg" alt="Image Description">
+        </div>
+    </div>
+    
+</body>
+</html>

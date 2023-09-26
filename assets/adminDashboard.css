@@ -1,0 +1,48 @@
+body{
+    padding: 0;
+    margin: 0;
+    
+}
+.navbar{
+    display: flexbox;
+    float: left;
+    height: 100vh;
+    background-color: black;
+    padding-left: 70px;
+    padding-right: 70px;
+    border-bottom-right-radius:50px;
+    overflow: hidden;
+}
+
+.nav_elements{
+    position: relative;
+    margin-top: 35vh;
+}
+
+span{
+    cursor: pointer;
+    position: relative;
+    display:inline-block;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    font-size: larger;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+
+}
+
+.content{
+    margin-top: 10rem;
+    background-color: #000;
+    margin-right: 40px;
+    font-size: 10px;
+    display: flexbox;
+    float: right;
+    width: 80vw;
+}
+
+.content table {
+    border-collapse: collapse; /* This property makes adjacent borders collapse into a single border */
+    width: 100%;
+    border: 1px solid #000; /* 1px solid black border around the table */
+}

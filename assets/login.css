@@ -1,0 +1,48 @@
+body{
+    background-color: #ffc8c8;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 90vh;
+    width: 97vw;
+    
+}
+
+span {
+    position: relative;
+    top: 210px;
+    font-weight: 300;
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    font-variant: small-caps;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+form {
+    text-align: center;
+}
+
+
+input[type="text"],
+input[type="password"] {
+    border-radius: 10px;
+    border-color: black;
+    background-color: #ffecec;
+    width: 100%;
+    padding: 15px;
+    margin: 5px 0;
+}
+
+
+input[type="submit"] {
+    margin-top: 15px;
+    background-color: #ffecec;
+    border-radius: 15%;
+    color: black;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}

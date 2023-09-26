@@ -1,0 +1,17 @@
+header{
+    display: flex;
+    float: right;
+}
+
+.admin{
+    margin: 1rem;
+    font-size: 20px;
+    padding: 5px 10px;
+    color: whitesmoke;
+    background-color: black;
+    border-radius: 10px;
+    text-decoration: none;
+    border-color: white;
+    cursor: pointer;
+    box-shadow: none;
+}

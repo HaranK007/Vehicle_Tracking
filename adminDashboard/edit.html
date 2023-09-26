@@ -1,0 +1,10 @@
+<form action="save/" method="post">
+    {% csrf_token %}
+
+    {% for key, value in user.0.items %}
+        {{key}}: <input type="text" name="{{ key }}" value="{{value}}">
+    {% endfor %}
+    
+    <input type="hidden" name="user_id" value="{{ user.id }}" >
+    <button type="submit">Edit</button>
+</form>

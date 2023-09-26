@@ -1,0 +1,68 @@
+{% extends 'adminDashboard.html' %}
+
+{% block content %}
+<div class="table">
+    <table>
+        <thead>
+            <tr>
+                <th></th>
+                {% for column in columns %}
+                    {% if column != 'ID' %}
+                        <th>{{ column }}</th>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in group %}
+            <tr>
+                <td>
+                    <input type="checkbox" class="user-checkbox" data-user-id="{{ user.id }}">
+                </td>
+                {% for column, value in user.items %}
+                    {% if column != 'id' %}
+                        <td>{{ value }}</td>
+                    {% endif %}
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+
+<div class="bottom">
+    <button id="delete-selected">Delete Selected</button>
+
+    <form method="post">
+        {% csrf_token %}
+        {{form}}
+        <button>submit</button>
+    </form>
+</div>
+
+<script>
+    document.getElementById('delete-selected').addEventListener('click', function() {
+        const selectedUsers = document.querySelectorAll('.user-checkbox:checked');
+        const userIds = Array.from(selectedUsers).map(user => user.getAttribute('data-user-id'));
+    
+         fetch('delete/', {
+             method: 'POST',
+             body: JSON.stringify({ user_ids: userIds }),
+             headers: {
+                 'Content-Type': 'application/json',
+                 'X-CSRFToken': '{{ csrf_token }}'
+             },
+         })
+         .then(response => {
+             if (response.ok) {
+                window.location.reload();
+             } else {
+                 // Handle deletion error.
+            }
+        })
+        .catch(error => {
+            // Handle network error.
+         });
+    });
+</script>
+{% endblock %}
